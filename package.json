@@ -1,5 +1,5 @@
 {
-  "name": "serve-static-content",
+  "name": "static-content",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Erin Swenson-Healey",
