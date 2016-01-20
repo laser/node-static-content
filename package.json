@@ -1,0 +1,14 @@
+{
+  "name": "serve-static-content",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Erin Swenson-Healey",
+  "dependencies": {
+    "express": "^4.13.3",
+    "nodemon": "^1.8.1",
+    "underscore": "^1.8.3"
+  },
+  "scripts": {
+    "start": "nodemon index.js /Users/eswenson-healey/dev/cjmain/cjo/developerportal/src/main/resources/cj/developerportal 8989"
+  }
+}
