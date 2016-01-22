@@ -20,18 +20,27 @@ else {
 }
 
 var serveStatic = function(fileName, response) {
-    response.sendfile(fileName, {
-        "root": fileRoot
-    });
+  response.sendfile(fileName, {
+    "root": fileRoot
+  });
 };
 
-app.get("/", function(req, res) {
-    serveStatic("index.html", res);
+app.get("/images/*", function(req, res) {
+  serveStatic("/images/" + req.params[0], res);
 });
 
-app.get("/*", function(req, res) {
-    serveStatic(req.params[0], res);
+app.get("/javascript/*", function(req, res) {
+  serveStatic("/javascript/" + req.params[0], res);
 });
+
+app.get("/fonts/*", function(req, res) {
+  serveStatic("/fonts/" + req.params[0], res);
+});
+
+app.get("*", function(req, res) {
+  serveStatic("index.html", res);
+});
+
 
 app.listen(port);
 
